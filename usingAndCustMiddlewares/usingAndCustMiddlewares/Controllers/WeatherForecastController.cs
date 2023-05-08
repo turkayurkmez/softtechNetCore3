@@ -9,7 +9,7 @@ namespace usingAndCustMiddlewares.Controllers
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+         };
 
         private readonly ILogger<WeatherForecastController> _logger;
 
@@ -28,6 +28,11 @@ namespace usingAndCustMiddlewares.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [HttpPost]
+        public IActionResult SendComment(CommentDetail? commentDetail)
+        {
+            return Ok(commentDetail);
         }
     }
 }
