@@ -3,7 +3,15 @@
     public interface ITenantService
     {
         public string GetTenantId();
-        //SaaS
+        //SaaS : Software as a Service
+        //       Solution as a Service
+
+        /*
+         * IaaS : Boş kiralık ev
+         * PaaS : Eşyalı kiralık ev
+         * SaaS : Günlük kiralık - AirBnB
+         */
+
     }
 
     public class SQLTenant : ITenantService

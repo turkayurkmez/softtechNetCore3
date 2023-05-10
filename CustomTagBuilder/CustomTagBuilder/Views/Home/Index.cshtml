@@ -1,0 +1,34 @@
+﻿@model CoursesViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    @foreach (var course in Model.Courses)
+    {
+        <div class="col-4">
+            <div class="card">
+                <img src="https://loremflickr.com/320/240/paris,girl/all" />
+                <div class="card-body">
+                    <h3 class="card-header">@course.Name</h3>
+                    <p class="card-text">@course.Description</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@*<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      
+        @for (int i = 1; i <= ViewBag.Pages; i++)
+        {
+            <li class="page-item"><a asp-action="Index" asp-route-pageNo="@i" class="page-link" >@i</a></li>
+        }
+       
+      
+      
+    </ul>
+</nav>*@
+
+<div page-model="@Model.PagingInfo" page-action="Index"></div>
