@@ -35,6 +35,16 @@ builder.Services.AddDistributedSqlServerCache(opt =>
 
 });
 
+builder.Services.AddCors(option =>
+{
+    option.AddPolicy("allow", policy =>
+    {
+        policy.AllowAnyHeader();
+        policy.AllowAnyMethod();
+        policy.AllowAnyOrigin();
+    });
+});
+
 
 var app = builder.Build();
 
@@ -73,8 +83,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseResponseCaching();
+app.UseCors("allow");
+
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
+
+public partial class Program
+{
+
+}

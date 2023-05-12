@@ -1,0 +1,46 @@
+[
+  {
+    "Id": 1,
+    "Name": "The Course A",
+    "Description": "Description of The Course A",
+    "StartDate": "2023-5-12",
+    "EndDate": "2023-6-1",
+    "Price": 0,
+    "TotalHours": 15,
+    "CategoryId": 1,
+    "CourseImage": "1.jpg"
+  },
+  {
+    "Id": 2,
+    "Name": "The Course B",
+    "Description": "Description of The Course B",
+    "StartDate": "2023-5-12",
+    "EndDate": "2023-6-1",
+    "Price": 0,
+    "TotalHours": 15,
+    "CategoryId": 1,
+    "CourseImage": "1.jpg"
+  },
+  {
+    "Id": 3,
+    "Name": "The Course C",
+    "Description": "Description of The Course C",
+    "StartDate": "2023-5-12",
+    "EndDate": "2023-6-1",
+    "Price": 0,
+    "TotalHours": 15,
+    "CategoryId": 1,
+    "CourseImage": "1.jpg"
+  },
+  {
+    "Id": 4,
+    "Name": "The Course D",
+    "Description": "Description of The Course D",
+    "StartDate": "2023-5-12",
+    "EndDate": "2023-6-1",
+    "Price": 0,
+    "TotalHours": 15,
+    "CategoryId": 1,
+    "CourseImage": "1.jpg"
+  }
+]

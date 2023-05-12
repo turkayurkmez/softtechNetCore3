@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.Entities", "Courses.Entities\Courses.Entities.csproj", "{5753FBD6-5EAE-4910-BF14-FE4811AEC640}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.Entities", "Courses.Entities\Courses.Entities.csproj", "{5753FBD6-5EAE-4910-BF14-FE4811AEC640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.DataOperations", "Courses.DataOperations\Courses.DataOperations.csproj", "{3D37137A-5164-42C6-98CA-FCBC4AB05A29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.DataOperations", "Courses.DataOperations\Courses.DataOperations.csproj", "{3D37137A-5164-42C6-98CA-FCBC4AB05A29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.Application", "Courses.Application\Courses.Application.csproj", "{485146CD-A153-4030-8243-0FEC5E7916D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.Application", "Courses.Application\Courses.Application.csproj", "{485146CD-A153-4030-8243-0FEC5E7916D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.API", "Courses.API\Courses.API.csproj", "{675DEBEF-DAC9-4D30-BCF0-AA9936DB0EF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.API", "Courses.API\Courses.API.csproj", "{675DEBEF-DAC9-4D30-BCF0-AA9936DB0EF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.DataTransferObjects", "Courses.DataTransferObjects\Courses.DataTransferObjects.csproj", "{B1ED9771-4C2D-4EB9-858E-66AC89CA2B18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.DataTransferObjects", "Courses.DataTransferObjects\Courses.DataTransferObjects.csproj", "{B1ED9771-4C2D-4EB9-858E-66AC89CA2B18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{47EE8FFC-D758-47FB-AFE6-18B567F1E8D4}"
 EndProject
@@ -20,6 +20,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{20900703-F896-44F8-98FD-3734D32FE82A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{94C201A0-1541-4345-A95D-66CE8CF9B602}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{21A3F93B-9927-426E-B2E2-37975BA49429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course.Tests", "Course.Tests\Course.Tests.csproj", "{3C22F6BA-39DD-4187-A20F-64FAA6B446CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,10 @@ Global
 		{B1ED9771-4C2D-4EB9-858E-66AC89CA2B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1ED9771-4C2D-4EB9-858E-66AC89CA2B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1ED9771-4C2D-4EB9-858E-66AC89CA2B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C22F6BA-39DD-4187-A20F-64FAA6B446CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C22F6BA-39DD-4187-A20F-64FAA6B446CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C22F6BA-39DD-4187-A20F-64FAA6B446CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C22F6BA-39DD-4187-A20F-64FAA6B446CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +65,7 @@ Global
 		{485146CD-A153-4030-8243-0FEC5E7916D6} = {20900703-F896-44F8-98FD-3734D32FE82A}
 		{675DEBEF-DAC9-4D30-BCF0-AA9936DB0EF0} = {94C201A0-1541-4345-A95D-66CE8CF9B602}
 		{B1ED9771-4C2D-4EB9-858E-66AC89CA2B18} = {20900703-F896-44F8-98FD-3734D32FE82A}
+		{3C22F6BA-39DD-4187-A20F-64FAA6B446CE} = {21A3F93B-9927-426E-B2E2-37975BA49429}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03257EB-DBC4-4049-819A-28AE2B93473C}
