@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dockerizeparttwo:
+    image: ${DOCKER_REGISTRY-}dockerizeparttwo
+    build:
+      context: .
+      dockerfile: DockerizePartTwo/Dockerfile

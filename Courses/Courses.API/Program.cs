@@ -1,4 +1,5 @@
 ﻿using Courses.API.Extensions;
+using Courses.API.Security;
 using Courses.Application.Mapper;
 using Courses.Application.Services;
 using Courses.DataOperations.Data;
@@ -45,6 +46,9 @@ builder.Services.AddCors(option =>
     });
 });
 
+builder.Services.AddAuthentication("Basic")
+                .AddScheme<BasicAuthenticationOption, BasicAuthenticationHandler>("Basic", null);
+
 
 var app = builder.Build();
 
@@ -84,7 +88,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseResponseCaching();
 app.UseCors("allow");
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

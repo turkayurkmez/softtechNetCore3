@@ -13,6 +13,7 @@
     <ul id="courses">
 
     </ul>
+    <div id="#durum"></div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script>
@@ -21,15 +22,24 @@
                 $.ajax({
                     url: 'https://localhost:7092/api/course',
                     type: 'GET',
+                    headers: {
+                        'Authorization': 'Basic ' + btoa('turkay:123')
+                    },
                     success: function (data) {
                         $.each(data, function (index, item) {
                             console.log(item);
-                            let li = $('<li>' + item.name + ' ' + item.description + "<img src='"+item.imageUrl+"'/>"+ '</li>');
+                            let li = $('<li>' + item.name + ' ' + item.description + "<img src='" + item.imageUrl + "'/>" + '</li>');
                             $('#courses').append(li);
                         });
                     },
                     error: function (err) {
-                        console.table(err);
+                        let p = $('<p>Bu işlemi yapamazsınız! Çünkü yetkiniz yok!</p>');
+                            $('#durum').append(p);
+                        if (err.status === 403) {
+                            let p = $('<p>Bu işlemi yapamazsınız! Çünkü yetkiniz yok!</p>');
+                            $('#durum').append(p);
+                        }
+
                     }
                 })
             });

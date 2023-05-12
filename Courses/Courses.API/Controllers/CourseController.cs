@@ -1,6 +1,7 @@
 ﻿using Courses.Application.Services;
 using Courses.DataTransferObjects.Requests;
 using Courses.DataTransferObjects.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
@@ -29,8 +30,11 @@ namespace Courses.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin,Editor")]
         public async Task<IActionResult> Get()
         {
+
+
             if (!memoryCache.TryGetValue("allCourses", out CacheBenchmark cacheBenchmark))
             {
                 var options = new MemoryCacheEntryOptions()
@@ -53,7 +57,7 @@ namespace Courses.API.Controllers
 
             }
 
-            logger.LogInformation($"{cacheBenchmark.CacheTime} tarihinde, get request çalıştı");
+            logger.LogInformation($"{cacheBenchmark.CacheTime} tarihinde, get request çalıştı. Gelen kullanıcı: {User.Identity.Name}");
             return Ok(cacheBenchmark.Courses);
         }
 
@@ -113,6 +117,7 @@ namespace Courses.API.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateCourse(CreateNewCourseRequest request)
         {
             if (ModelState.IsValid)
